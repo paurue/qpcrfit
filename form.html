@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+
+<title>qPCRFit Analysis tool</title>
+<link rel="stylesheet" type="text/css" media="all" href="/css/qpcrfit.css" />
+</head>
+<body>
+  <div class="container">
+      <div class="content">
+        <div class="page-header">
+          <div class="row">
+            <p><h1>AMALab webtools</h1></p>
+          </div>
+        </div>
+		<hr>
+		<p><h2>qPCR analysis tool</h2></p>
+		<form enctype="multipart/form-data" action="/upload" method="post">
+		<table>
+			<tr><td>Experiment:</td> <td><input type="text" name="experiment" value="Name of the experiment" /></td></tr>
+			<tr><td>User: </td><td><input type="text" name="user" value="Username" /></td></tr>
+			<tr><td>Files: </td><td><input type="file" name="file" id="file"  multiple="multiple"  accept="text/csv"/></td></tr>
+		</table>
+		<br />
+		<br />
+		<input type="submit" value="Upload" />
+		</form>
+		<hr>
+		<p><h2>qPCR data merger</h2></p>
+		<form enctype="multipart/form-data" action="/merge" method="post">
+		<table>
+			<tr><td>Files: </td><td><input type="file" name="file" id="file"  multiple="multiple"  accept="text/csv"/></td></tr>
+		</table>
+		<br />
+		<br />
+		<input type="submit" value="Merge" />
+		</form>
+    </div>
+  </div>
+</body>
+
